@@ -152,7 +152,7 @@ async function login() {
     supaemail = session.user.email;
     startSocket();
     // console.log('로그인 성공:', data)
-    alert('로그인 성공!')
+    // alert('로그인 성공!')
     document.getElementById('authSection').style.display = 'none';  // 👉 숨기기
     document.getElementById('infoForm').style.display = 'block';
     document.getElementById('logoutBtn').style.display = 'block';
