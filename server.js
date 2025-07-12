@@ -8,8 +8,12 @@ const userInfos = {};
 
 const app = express();
 const server = http.createServer(app);
-const io = socketIO(server);
-
+const io = socketIO(server, {
+    cors: {
+        origin: "*",  // 일단 개발중에는 모두 허용, 배포 땐 https://dimirc-front.vercel.app
+        methods: ["GET", "POST"]
+    }
+});
 
 const PORT = 3000;
 
