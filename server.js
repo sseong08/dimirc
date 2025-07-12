@@ -115,7 +115,6 @@ io.on('connection', (socket) => {
     });
 
     socket.on('disconnect', () => {
-    });
         if (waitingUser && waitingUser.socket.id === socket.id) {
             waitingUser = null;
         }
