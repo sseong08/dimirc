@@ -1,0 +1,132 @@
+body {
+    font-family: 'Helvetica', sans-serif;
+    background-color: #fff0f5;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h2 {
+    color: #ff69b4;
+  }
+
+  #username, #major, #sel_maj, input[type="submit"], #input, #send, #leave {
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ffb6c1;
+    margin: 5px;
+  }
+
+  #username, #input {
+    width: 300px;
+  }
+
+  input[type="submit"], #send, #leave {
+    background-color: #ffb6c1;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  input[type="submit"]:hover, #send:hover, #leave:hover {
+    background-color: #ff69b4;
+  }
+
+  #infoForm {
+    margin-bottom: 20px;
+  }
+
+  #status {
+    margin: 10px 0;
+    font-weight: bold;
+    color: #cc3366;
+  }
+
+  #chat {
+    width: 100%;
+    max-width: 400px;
+    background-color: white;
+    border: 2px solid #ffb6c1;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(255, 105, 180, 0.2);
+  }
+
+  #messages {
+    height: 200px;
+    overflow-y: auto;
+    background-color: #fffafd;
+    border: 1px solid #ffe4e1;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  #messages div {
+    margin-bottom: 8px;
+  }
+
+  #inputArea {
+    display: flex;
+    gap: 10px;
+  }
+
+  #authSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fffafd;
+    border: 2px solid #ffb6c1;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 0 10px rgba(255, 105, 180, 0.2);
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  #authSection input[type="email"],
+  #authSection input[type="password"],
+  #authSection input[type="text"] {
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ffb6c1;
+    margin: 8px 0;
+    width: 90%;
+  }
+  
+  #authSection button {
+    background-color: #ffb6c1;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 95%;
+    transition: background-color 0.3s;
+  }
+  
+  #logoutBtn {
+    background-color: #ffb6c1;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 400px;
+    transition: background-color 0.3s;
+  }
+
+  #authSection button:hover, #logoutBtn:hover {
+    background-color: #ff69b4;
+  }
+  

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>랜덤 채팅</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>디미고 랜덤 채팅</h2>
+
+  <div id="status">닉네임과 과를 입력하고 시작하세요</div>
+
+  <div id="authSection">
+    <div id="loginSection">
+      <h3>로그인</h3>
+      <input type="email" id="loginEmail" placeholder="이메일">
+      <input type="password" id="loginPassword" placeholder="비밀번호">
+      <button onclick="login()" style="text-align: center;">로그인</button>
+      <button onclick="showSignUp()" style="text-align: center;">회원가입</button>
+    </div>
+  
+    <div id="signUpSection" style="display:none;">
+      <h3>회원가입</h3>
+      <input type="email" id="signUpEmail" placeholder="이메일">
+      <input type="password" id="signUpPassword" placeholder="비밀번호 (6자 이상)">
+      <input type="password" id="signUpPasswordCheck" placeholder="비밀번호 확인">
+      <input type="text" id="teacherName" placeholder="제제쌤의 본명은?">
+      <button onclick="signUp()">회원가입</button>
+      <button onclick="showLogin()">돌아가기</button>
+    </div>
+  </div>
+
+
+
+  <form id="infoForm" action="#" style="display: none;">
+    <input type="text" id="username" placeholder="사용할 이름을 선택해주세요" /><br>
+    <label for="major">과 선택: </label>
+    <select name="major" id="major">
+      <option value="EB">E-비즈니스</option>
+      <option value="DC">디지털콘텐츠</option>
+      <option value="WP">웹프로그래밍</option>
+      <option value="HD">해킹 방어과</option>
+    </select>
+    <input type="submit" value="채팅 시작" />
+  </form>
+    
+
+
+  <div id="chat" style="display: none;">
+    <div id="messages" style="border: 1px solid #ccc; height: 200px; overflow-y: scroll; margin: 10px 0;"></div>
+    <input type="text" id="input" placeholder="메시지 입력..." />
+    <button id="send">보내기</button>
+    <button id="leave">채팅 나가기</button>
+  </div>
+
+  <button id="logoutBtn" style="display: none;">로그아웃</button>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="supabaseClient.js"></script>
+  <script src="chat.js" defer></script>
+</body>
+</html>
