@@ -1,5 +1,4 @@
-import dotenv from 'dotenv';
-dotenv.config();
+require('dotenv').config(); 
 const express = require('express');
 const http = require('http');
 const socketIO = require('socket.io');
@@ -19,6 +18,19 @@ app.use(express.static('public'));
 const roomMessages = {}; 
 let waitingUser = null;  
 let roomIdCounter = 1;
+
+
+app.get('/supabaseClient.js', (req, res) => {
+    res.type('application/javascript');
+    res.send(`
+      const SUPABASE_URL = "${process.env.SUPABASE_URL}";
+      const SUPABASE_ANON_KEY = "${process.env.SUPABASE_ANON_KEY}";
+      window.supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
+        persistSession: true,
+        autoRefreshToken: true
+      });
+    `);
+  });
 
 function saveChatLog(roomId) {
     if (!roomId) return;
