@@ -10,7 +10,7 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIO(server, {
     cors: {
-        origin: "*",  // 일단 개발중에는 모두 허용, 배포 땐 https://dimirc-front.vercel.app
+        origin: "https://www.dimeet.site/",  // 일단 개발중에는 모두 허용, 배포 땐 https://dimirc-front.vercel.app
         methods: ["GET", "POST"]
     }
 });
